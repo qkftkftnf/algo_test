@@ -28,9 +28,6 @@ public class Main {
 			h=sc.nextInt();
 			
 			result=0;
-			int sx=0;
-			int sy=0;
-			int first=0;
 			
 			if(w==0 &&h==0) {
 				break;
@@ -41,28 +38,21 @@ public class Main {
 			for(int i=0;i<h;i++) {
 				for(int j=0;j<w;j++) {
 					arr[i][j]=sc.nextInt();
-					if(arr[i][j]==1 &&first==0) {
-						sx=i;
-						sy=j;
-						first++;
-					}
+					
 				}
 			}
-			bfs(sx,sy,new boolean[h][w]);
+			bfs(new boolean[h][w]);
 			System.out.println(result);
-		}
-		
-		
+		}	
 	}
 
 	
-	public static void bfs(int x,int y,boolean visited[][]) {
+	public static void bfs(boolean visited[][]) {
 		Queue<pos> queue=new LinkedList<>();
 		for(int i=0;i<h;i++) {
 			for(int j=0;j<w;j++) {
 				if(arr[i][j]==1 && !visited[i][j]) {
 					result++;
-					
 					queue.offer(new pos(i,j));
 					visited[i][j]=true;
 					while(!queue.isEmpty()) {
@@ -79,9 +69,6 @@ public class Main {
 					}
 				}
 			}
-		}
-		
-		
-		
+		}	
 	}
 }
