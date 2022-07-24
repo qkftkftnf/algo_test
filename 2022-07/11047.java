@@ -2,11 +2,10 @@ import java.util.Scanner;
 
 public class Main {
 
-	public static int N,K,arr[],min=Integer.MAX_VALUE;
+	public static int N,K,arr[];
 	public static void main(String[] args) {
 		Scanner sc=new Scanner(System.in);
 
-	
 		N=sc.nextInt();
 		K=sc.nextInt();
 		
@@ -16,15 +15,13 @@ public class Main {
 			arr[i]=sc.nextInt();
 			
 		}
-		
 		greedy(0,0,N-1);
-		System.out.println(min);
 		
-				
+			
 	}
 	public static void greedy(int sum,int count,int pos) {
 		if(sum==K){
-			min=count;
+			System.out.println(count);
 			return;
 		}else if(arr[pos]>K-sum) {
 			greedy(sum,count,pos-1);
