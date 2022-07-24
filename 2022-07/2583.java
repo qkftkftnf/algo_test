@@ -46,7 +46,7 @@ public class Main {
 		while(!res.isEmpty()) {
 			System.out.print(res.poll()+" ");
 		}
-		
+	
 
 	}
 	public static void bfs(boolean visited[][]) {
