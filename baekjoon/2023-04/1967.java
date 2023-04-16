@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
+//트리의 지름
 public class Main {
 	public static class pos implements Comparable<pos>{
 		int to,cost;
